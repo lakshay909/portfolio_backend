@@ -12,7 +12,12 @@ app.use(express.json());
 // --- MongoDB Connection ---
 const uri = "mongodb+srv://lakshayn02:narula2004@cluster0.rog9v4f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 if (uri) {
-  mongoose.connect(uri);
+  mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true
+  });
+
   
   const connection = mongoose.connection;
   connection.once('open', () => {
