@@ -7,7 +7,7 @@ const app = express();
 
 // --- ADD THIS HERE ---
 const corsOptions = {
-  origin: 'https://portfolio-frontend.onrender.com', // replace with your actual frontend deployed URL
+  origin: 'https://portfolio-frontend-3ugh.onrender.com', // replace with your actual frontend deployed URL
   methods: ['GET', 'POST'],
   credentials: true
 };
