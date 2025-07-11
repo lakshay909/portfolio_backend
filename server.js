@@ -5,8 +5,14 @@ const path = require('path');
 
 const app = express();
 
+// --- ADD THIS HERE ---
+const corsOptions = {
+  origin: 'https://portfolio-frontend.onrender.com', // replace with your actual frontend deployed URL
+  methods: ['GET', 'POST'],
+  credentials: true
+};
+app.use(cors(corsOptions));
 // --- Middleware ---
-app.use(cors()); 
 app.use(express.json());
 
 // --- MongoDB Connection ---
