@@ -52,7 +52,13 @@ app.use((err, req, res, next) => {
 });
 
 // --- IMPORTANT: EXPORT THE APP FOR VERCEL ---
+// module.exports = app;
+
+// Instead, start server for Render:
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
+
+
 
