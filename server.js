@@ -52,4 +52,7 @@ app.use((err, req, res, next) => {
 });
 
 // --- IMPORTANT: EXPORT THE APP FOR VERCEL ---
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
