@@ -8,6 +8,7 @@ const projectSchema = new Schema({
     image: { type: String, required: true },
     tech: [{ type: String }], // An array of strings
     category: { type: String, required: true },
+    githubLink: { type: String, required: true }, 
 }, {
     timestamps: true,
 });
