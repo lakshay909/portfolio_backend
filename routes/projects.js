@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Project = require('../models/Project'); // Make sure this file exists and exports your mongoose model
+const Project = require('../models/project'); // Make sure this file exists and exports your mongoose model
 
 // GET all projects
 router.get('/', async (req, res) => {
