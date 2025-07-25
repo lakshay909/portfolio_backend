@@ -33,13 +33,14 @@ router.get('/:id', async (req, res) => {
 // POST create new project (for admin use)
 router.post('/', async (req, res) => {
   try {
-    const { title, description, category, tech } = req.body;
+    const { title, description, category, tech, githubLink } = req.body;
 
     const newProject = new Project({
       title,
       description,
       category,
-      tech
+      tech,
+      githubLink
     });
 
     const savedProject = await newProject.save();
