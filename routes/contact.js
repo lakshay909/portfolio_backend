@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Contact = require('../models/Contact'); // Make sure this file exists and exports your mongoose model
+const Contact = require('../models/contact'); // Make sure this file exists and exports your mongoose model
 
 // POST contact form submission
 router.post('/', async (req, res) => {
